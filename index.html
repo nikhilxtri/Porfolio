@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nikhil | Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans">
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar fixed w-full z-30 shadow-lg transition-colors duration-300">
+    <div class="w-full px-6 flex justify-between items-center h-20">
+      <a href="#home" class="font-bold text-2xl tracking-tight text-[#f5f5f5]">Nikhil</a>
+      <div class="hidden md:flex space-x-10 text-lg">
+        <a href="#home" class="nav-link transition">Home</a>
+        <a href="#skills" class="nav-link transition">Skills</a>
+        <a href="#projects" class="nav-link transition">Projects</a>
+      </div>
+      <!-- Hamburger -->
+      <button class="md:hidden p-3" onclick="toggleMenu()">
+        <svg class="w-8 h-8 text-[#f5f5f5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-4 text-lg">
+      <a href="#home" class="block py-2 nav-link" onclick="toggleMenu()">Home</a>
+      <a href="#skills" class="block py-2 nav-link" onclick="toggleMenu()">Skills</a>
+      <a href="#projects" class="block py-2 nav-link" onclick="toggleMenu()">Projects</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center relative" style="background:#121212;">
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80"
+         alt="Hero Background"
+         class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none select-none" />
+    <div class="relative z-10 text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-4 text-[#f5f5f5]">
+        Hi, I’m Nikhil ( 3D Artist )
+      </h1>
+      <p class="text-lg md:text-2xl text-gray-200 mb-0">
+        I create immersive 3D worlds, animations, and FX simulations.
+      </p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20" style="background:#121212;">
+    <div class="w-full px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center section-title" style="color: #fff;">About Me</h2>
+      <div class="flex flex-col md:flex-row items-start gap-10">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Profile" class="w-40  h-40 rounded-full shadow-lg object-cover border-4" style="border-color:#232323;">
+        <div class="flex-1">
+          <p class="text-lg mb-6 text-gray-300">I’m Nikhil, a passionate 3D artist with a background in digital art and animation. I specialize in modeling, texturing, and FX simulation, bringing creative visions to life with modern tools and techniques.</p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+            <!-- Education Card -->
+            <div class="education-card self-start">
+              <h3 class="font-semibold mb-2 flex items-center justify-between" style="color:#b1b1b1; font-size: 1.5rem;">
+                Education
+              </h3>
+              <ul class="pt-2">
+                <li class="">
+                  BFA in Animation & VFX<br>
+                  <span class="text-sm text-gray-400 ">XYZ Art School, 2022</span>
+                </li>
+                <li class="other-education">
+                  Diploma in Digital Art, ABC Institute, 2020<br>
+                  <span class="text-sm text-gray-400">ABC Institute, 2020</span>
+                </li>
+                <li class="other-education">
+                  Online Course: Blender Mastery, 2021<br>
+                  <span class="text-sm text-gray-400">Online, 2021</span>
+                </li>
+              </ul>
+            </div>
+            <!-- Experience Card -->
+            <div class="experience-card self-start">
+              <h3 class="font-semibold mb-2 flex items-center justify-between" style="color:#b1b1b1; font-size: 1.5rem;">
+                Experience
+              </h3>
+              <ul class="pt-2">
+                <li class="">
+                  3D Artist at Creative Studio<br>
+                  <span class="text-sm text-gray-400 ">2022–Present</span>
+                </li>
+                <li class="other-experience">
+                  Freelance 3D Artist <br>
+                  <span class="text-sm text-gray-400">2021–2022</span>
+                </li>
+                <li class="other-experience">
+                  Intern, VFX Lab<br>
+                  <span class="text-sm text-gray-400">2020-2021</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-20" style="background:#121212;">
+    <div class="w-full px-4">
+      <h2 class="text-3xl font-bold mb-10 text-center section-title" style="color: #fff;">Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <!-- 3D Modelling -->
+        <div class="flex flex-col items-center group relative">
+          <span class="skills-icon p-4 rounded-full mb-3 shadow-lg bg-[#232323]">
+            <i class="fa-solid fa-cube text-3xl text-[#f5f5f5]"></i>
+          </span>
+          <span class="font-semibold skills-label mb-2">3D Modelling</span>
+          <div class="absolute left-1/2 -translate-x-1/2 top-[90%] w-64 bg-[#1a1a1a] text-white rounded-lg p-4 shadow-lg
+            opacity-0 scale-95 -translate-y-5 pointer-events-none
+            transition-all duration-500 ease-[cubic-bezier(.4,2,.3,1)]
+            group-hover:opacity-100 group-hover:scale-105 group-hover:translate-y-3 group-hover:pointer-events-auto z-10 text-center backdrop-blur-sm">
+            With over 3 years of experience in modelling
+          </div>
+        </div>
+        <!-- Texturing -->
+        <div class="flex flex-col items-center group relative">
+          <span class="skills-icon p-4 rounded-full mb-3 shadow-lg bg-[#232323]">
+            <i class="fa-solid fa-link text-3xl text-[#f5f5f5]"></i>
+          </span>
+          <span class="font-semibold skills-label mb-2">Texturing</span>
+          <div class="absolute left-1/2 -translate-x-1/2 top-[90%] w-64 bg-[#1a1a1a] text-white rounded-lg p-4 shadow-lg
+            opacity-0 scale-95 -translate-y-5 pointer-events-none
+            transition-all duration-500 ease-[cubic-bezier(.4,2,.3,1)]
+            group-hover:opacity-100 group-hover:scale-105 group-hover:translate-y-3 group-hover:pointer-events-auto z-10 text-center">
+            With over 3 years of experience in texturing
+          </div>
+        </div>
+        <!-- Animation -->
+        <div class="flex flex-col items-center group relative">
+          <span class="skills-icon p-4 rounded-full mb-3 shadow-lg bg-[#232323]">
+            <i class="fa-solid fa-clock text-3xl text-[#f5f5f5]"></i>
+          </span>
+          <span class="font-semibold skills-label mb-2">Animation</span>
+          <div class="absolute left-1/2 -translate-x-1/2 top-[90%] w-64 bg-[#1a1a1a] text-white rounded-lg p-4 shadow-lg
+            opacity-0 scale-95 -translate-y-5 pointer-events-none
+            transition-all duration-500 ease-[cubic-bezier(.4,2,.3,1)]
+            group-hover:opacity-100 group-hover:scale-105 group-hover:translate-y-3 group-hover:pointer-events-auto z-10 text-center">
+            With over 3 years of experience in animation
+          </div>
+        </div>
+        <!-- FX Simulation -->
+        <div class="flex flex-col items-center group relative">
+          <span class="skills-icon p-4 rounded-full mb-3 shadow-lg bg-[#232323]">
+            <i class="fa-solid fa-bolt text-3xl text-[#f5f5f5]"></i>
+          </span>
+          <span class="font-semibold skills-label mb-2">FX Simulation</span>
+          <div class="absolute left-1/2 -translate-x-1/2 top-[90%] w-60 bg-[#1a1a1a] text-white rounded-lg p-4 shadow-lg
+            opacity-0 scale-95 -translate-y-5 pointer-events-none
+            transition-all duration-500 ease-[cubic-bezier(.4,2,.3,1)]
+            group-hover:opacity-100 group-hover:scale-105 group-hover:translate-y-3 group-hover:pointer-events-auto z-10 text-center">
+            With over 3 years of experience in FX simulation
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Software Section -->
+  <section id="skills" class="py-20" style="background:#121212;">
+    <div class="w-full px-4">
+      <h2 class="text-3xl font-bold mb-10 text-center section-title" style="color: #fff;">Software</h2>
+      <div class="grid grid-cols-3 md:grid-cols-9 gap-8 text-center">
+        <!-- Blender -->
+        <div class="flex flex-col items-center group relative">
+          <span class="skills-icon p-4 rounded-full mb-3 shadow-lg bg-[#232323]">
+            <img src="assets/blender_icon_256x256.png" alt="Blender" class="w-8 h-8">
+          </span>
+          <div class="absolute left-1/2 -translate-x-1/2 top-[90%] w-64 bg-[#1a1a1a] text-white rounded-lg p-4 shadow-lg
+            opacity-0 scale-95 -translate-y-5 pointer-events-none
+            transition-all duration-500 ease-[cubic-bezier(.4,2,.3,1)]
+            group-hover:opacity-100 group-hover:scale-105 group-hover:translate-y-3 group-hover:pointer-events-auto z-10 text-center backdrop-blur-sm">
+            With over 3 years of experience in modelling
+          </div>
+        </div>
+        <!-- Auto-desk Maya -->
+        <div class="flex flex-col items-center group relative">
+          <span class="skills-icon p-4 rounded-full mb-3 shadow-lg bg-[#232323]">
+            <i class="fa-solid fa-link text-3xl text-[#f5f5f5]"></i>
+          </span>
+          <div class="absolute left-1/2 -translate-x-1/2 top-[90%] w-64 bg-[#1a1a1a] text-white rounded-lg p-4 shadow-lg
+            opacity-0 scale-95 -translate-y-5 pointer-events-none
+            transition-all duration-500 ease-[cubic-bezier(.4,2,.3,1)]
+            group-hover:opacity-100 group-hover:scale-105 group-hover:translate-y-3 group-hover:pointer-events-auto z-10 text-center">
+            With over 3 years of experience in texturing
+          </div>
+        </div>
+        <!-- After Effect -->
+        <div class="flex flex-col items-center group relative">
+          <span class="skills-icon p-4 rounded-full mb-3 shadow-lg bg-[#232323]">
+            <i class="fa-solid fa-clock text-3xl text-[#f5f5f5]"></i>
+          </span>
+          <div class="absolute left-1/2 -translate-x-1/2 top-[90%] w-64 bg-[#1a1a1a] text-white rounded-lg p-4 shadow-lg
+            opacity-0 scale-95 -translate-y-5 pointer-events-none
+            transition-all duration-500 ease-[cubic-bezier(.4,2,.3,1)]
+            group-hover:opacity-100 group-hover:scale-105 group-hover:translate-y-3 group-hover:pointer-events-auto z-10 text-center">
+            With over 3 years of experience in animation
+          </div>
+        </div>
+        <!-- Houdini -->
+        <div class="flex flex-col items-center group relative">
+          <span class="skills-icon p-4 rounded-full mb-3 shadow-lg bg-[#232323]">
+            <i class="fa-solid fa-bolt text-3xl text-[#f5f5f5]"></i>
+          </span>
+          <div class="absolute left-1/2 -translate-x-1/2 top-[90%] w-60 bg-[#1a1a1a] text-white rounded-lg p-4 shadow-lg
+            opacity-0 scale-95 -translate-y-5 pointer-events-none
+            transition-all duration-500 ease-[cubic-bezier(.4,2,.3,1)]
+            group-hover:opacity-100 group-hover:scale-105 group-hover:translate-y-3 group-hover:pointer-events-auto z-10 text-center">
+            With over 3 years of experience in FX simulation
+          </div>
+        </div>
+        <!-- Photoshop -->
+         <div class="flex flex-col items-center group relative">
+          <span class="skills-icon p-4 rounded-full mb-3 shadow-lg bg-[#232323]">
+            <i class="fa-solid fa-link text-3xl text-[#f5f5f5]"></i>
+          </span>
+          <div class="absolute left-1/2 -translate-x-1/2 top-[90%] w-60 bg-[#1a1a1a] text-white rounded-lg p-4 shadow-lg
+            opacity-0 scale-95 -translate-y-5 pointer-events-none
+            transition-all duration-500 ease-[cubic-bezier(.4,2,.3,1)]
+            group-hover:opacity-100 group-hover:scale-105 group-hover:translate-y-3 group-hover:pointer-events-auto z-10 text-center">
+            With over 3 years of experience in FX simulation
+          </div>
+        </div>
+        <!-- Nuke -->
+         <div class="flex flex-col items-center group relative">
+          <span class="skills-icon p-4 rounded-full mb-3 shadow-lg bg-[#232323]">
+            <i class="fa-solid fa-clock text-3xl text-[#f5f5f5]"></i>
+          </span>
+          <div class="absolute left-1/2 -translate-x-1/2 top-[90%] w-60 bg-[#1a1a1a] text-white rounded-lg p-4 shadow-lg
+            opacity-0 scale-95 -translate-y-5 pointer-events-none
+            transition-all duration-500 ease-[cubic-bezier(.4,2,.3,1)]
+            group-hover:opacity-100 group-hover:scale-105 group-hover:translate-y-3 group-hover:pointer-events-auto z-10 text-center">
+            With over 3 years of experience in FX simulation
+          </div>
+        </div>
+        <!-- Z-Brush -->
+         <div class="flex flex-col items-center group relative">
+          <span class="skills-icon p-4 rounded-full mb-3 shadow-lg bg-[#232323]">
+            <i class="fa-solid fa-bolt text-3xl text-[#f5f5f5]"></i>
+          </span>
+          <div class="absolute left-1/2 -translate-x-1/2 top-[90%] w-60 bg-[#1a1a1a] text-white rounded-lg p-4 shadow-lg
+            opacity-0 scale-95 -translate-y-5 pointer-events-none
+            transition-all duration-500 ease-[cubic-bezier(.4,2,.3,1)]
+            group-hover:opacity-100 group-hover:scale-105 group-hover:translate-y-3 group-hover:pointer-events-auto z-10 text-center">
+            With over 3 years of experience in FX simulation
+          </div>
+        </div>
+        <!-- illustrator  -->
+         <div class="flex flex-col items-center group relative">
+          <span class="skills-icon p-4 rounded-full mb-3 shadow-lg bg-[#232323]">
+            <i class="fa-solid fa-bolt text-3xl text-[#f5f5f5]"></i>
+          </span>
+          <div class="absolute left-1/2 -translate-x-1/2 top-[90%] w-60 bg-[#1a1a1a] text-white rounded-lg p-4 shadow-lg
+            opacity-0 scale-95 -translate-y-5 pointer-events-none
+            transition-all duration-500 ease-[cubic-bezier(.4,2,.3,1)]
+            group-hover:opacity-100 group-hover:scale-105 group-hover:translate-y-3 group-hover:pointer-events-auto z-10 text-center">
+            With over 3 years of experience in FX simulation
+          </div>
+        </div>
+        <!-- illustrator  -->
+         <div class="flex flex-col items-center group relative">
+          <span class="skills-icon p-4 rounded-full mb-3 shadow-lg bg-[#232323]">
+            <i class="fa-solid fa-bolt text-3xl text-[#f5f5f5]"></i>
+          </span>
+          <div class="absolute left-1/2 -translate-x-1/2 top-[90%] w-60 bg-[#1a1a1a] text-white rounded-lg p-4 shadow-lg
+            opacity-0 scale-95 -translate-y-5 pointer-events-none
+            transition-all duration-500 ease-[cubic-bezier(.4,2,.3,1)]
+            group-hover:opacity-100 group-hover:scale-105 group-hover:translate-y-3 group-hover:pointer-events-auto z-10 text-center">
+            With over 3 years of experience in FX simulation
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20" style="background:#121212;">
+    <div class="w-full px-4">
+      <h2 class="text-3xl font-bold mb-10 text-center section-title" style="color: #fff;">My Projects</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project Card 1 -->
+        <div class="project-card rounded-xl shadow-lg p-0 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80" alt="Sci-Fi Cityscape" class="w-full h-40 object-cover">
+          <div class="p-6">
+            <h3 class="font-semibold text-xl mb-2">Sci-Fi Cityscape</h3>
+            <p class="text-gray-300 mb-2">A futuristic city environment modeled and textured in Blender, featuring dynamic lighting and animation.</p>
+          </div>
+        </div>
+        <!-- Project Card 2 -->
+        <div class="project-card rounded-xl shadow-lg p-0 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="Creature Animation" class="w-full h-40 object-cover">
+          <div class="p-6">
+            <h3 class="font-semibold text-xl mb-2">Creature Animation</h3>
+            <p class="text-gray-300 mb-2">A rigged and animated fantasy creature, showcasing advanced character animation and FX simulation.</p>
+          </div>
+        </div>
+        <!-- Project Card 3 -->
+        <div class="project-card rounded-xl shadow-lg p-0 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=600&q=80" alt="Product Visualization" class="w-full h-40 object-cover">
+          <div class="p-6">
+            <h3 class="font-semibold text-xl mb-2">Product Visualization</h3>
+            <p class="text-gray-300 mb-2">High-quality 3D renders for a tech product, focusing on photorealistic materials and lighting.</p>
+          </div>
+        </div>
+        <!-- Project Card 4 -->
+         <div id="extra-projects" class="">
+          <div class="project-card rounded-xl shadow-lg p-0 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80" alt="Architectural Walkthrough" class="w-full h-40 object-cover">
+            <div class="p-6">
+              <h3 class="font-semibold text-xl mb-2">FX Simulation Reel</h3>
+              <p class="text-gray-300 mb-2">A compilation of FX simulations including fire, smoke, and water, created with Houdini and Blender.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Extra Projects (hidden by default) -->
+        <div id="extra-projects2" class="">
+          <div class="project-card rounded-xl shadow-lg p-0 overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=600&q=80" alt="Architectural Walkthrough" class="w-full h-40 object-cover">
+            <div class="p-6">
+              <h3 class="font-semibold text-xl mb-2">Architectural Walkthrough</h3>
+              <p class="text-gray-300 mb-2">Interactive 3D walkthrough of a modern apartment, optimized for real-time rendering.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center mt-8">
+        <button id="show-more-btn" onclick="showAllProjects()" class="text-white transition">Show All Projects</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20" style="background:#121212;">
+    <div class="max-w-2xl mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-10 text-center section-title" style="color: #fff;">Contact</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Email -->
+        <a href="mailto:nikhil.xtri11@gmail.com" target="_blank" class="contact-card flex items-center gap-3 rounded-xl p-5 shadow-lg">
+          <i class="fa-solid fa-envelope w-7 h-7 text-[#888] text-2xl"></i>
+          <span class="font-semibold">nikhil.xtri11@gmail.com</span>
+        </a>
+        <!-- Instagram -->
+        <a href="https://instagram.com/nikhil_thapa" target="_blank" class="contact-card flex items-center gap-3 rounded-xl p-5 shadow-lg">
+          <i class="fa-brands fa-instagram w-7 h-7 text-[#888] text-2xl"></i>
+          <span class="font-semibold">@nikhil_thapa</span>
+        </a>
+        <!-- LinkedIn -->
+        <a href="https://linkedin.com/in/nikhil3d" target="_blank" class="contact-card flex items-center gap-3 rounded-xl p-5 shadow-lg">
+          <i class="fa-brands fa-linkedin w-7 h-7 text-[#888] text-2xl"></i>
+          <span class="font-semibold">LinkedIn</span>
+        </a>
+        <!-- Behance -->
+        <a href="https://behance.net/" target="_blank" class="contact-card flex items-center gap-3 rounded-xl p-5 shadow-lg">
+          <i class="fa-brands fa-behance w-7 h-7 text-[#888] text-2xl"></i>
+          <span class="font-semibold">Behance</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-10 text-center">
+    © 2025 Nikhil — 3D Artist. All rights reserved.
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    }
+    // Show all projects
+    function showAllProjects() {
+      const extra1 = document.getElementById('extra-projects');
+      const extra2 = document.getElementById('extra-projects2');
+      const btn = document.getElementById('show-more-btn');
+      const isHidden = !extra1.classList.contains('expanded');
+      // Animate extra projects
+      if (isHidden) {
+        extra1.classList.add('expanded');
+        extra2.classList.add('expanded');
+        btn.classList.add('transparent-bg');
+        btn.textContent = 'Hide Projects';
+      } else {
+        extra1.classList.remove('expanded');
+        extra2.classList.remove('expanded');
+        btn.classList.remove('transparent-bg');
+        btn.textContent = 'Show All Projects';
+      }
+    }
+  </script>
+</body>
+</html>
